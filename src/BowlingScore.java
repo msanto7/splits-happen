@@ -9,7 +9,8 @@ public class BowlingScore {
 	
 	//10 frames
 	//10 pins per frame
-	//2 rolls in every frame besides the final (if strike the 2 or 3, if spare then 3)
+	//2 rolls in every frame besides the final (if strike the 2, if spare then 3)
+	//21 max rolls
 
 	public static void main(String[] args) {
 		
@@ -27,11 +28,52 @@ public class BowlingScore {
 		
 		System.out.println("Bowling Score:  ");  //Build test
 		
-		
-		
-
-		
 	} //End Main
+	
+	
+	//Scoring Logic ************************************************************************
+	public int score() {
+		
+		//calculate and return score 
+		
+		//initialize 
+		int score = 0;
+		
+		for (int i = 0; i < 21; i++) {
+			
+			//if frame total < 10
+				//basic case (frame is neither spare nor strike 
+				//score = (roll1 of frame) + (roll2 of frame)
+			
+			//else if ('/' spare)
+				//score = 10 + (next roll)
+			
+			//else (strike)
+				// score = 10 + (next 2 rolls, total of pins down in the next frame)
+				
+			
+			
+			
+		} //End for loop
+		
+			
+			return 0;
+		
+		
+	} //End Method Score 
+	//************************************
+	
+	public boolean isSpare() {
+		return true;
+	}
+	
+	public boolean isStrike() {
+		return true;
+	}
+	
+	
+	
+	
 
 } //End Class
 
