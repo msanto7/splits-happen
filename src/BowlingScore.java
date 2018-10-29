@@ -21,6 +21,8 @@ public class BowlingScore {
 			//must decide on how to store
 			//the sequence will contain numbers 1-9, "/" (spare), "X" (strike), "-" (miss) 
 			//how should we store a sequence?
+		//array?...we need to conceptualize a frame in addition to just individual rolls..
+		//this is how we will keep track of a spare or strike 
 		
 		
 		//we need to keep track of 2 frames at a time...only adding to the total score when we are sure we have finished calulcating a spare or strike scenario 
@@ -65,11 +67,18 @@ public class BowlingScore {
 	//************************************
 	
 	public boolean isSpare() {
-		return true;
+		//if first or second roll in frame is "/"
+			return true;
+		
+		//else 
+			//return false;
 	}
 	
 	public boolean isStrike() {
-		return true;
+		//if first roll in frame is "X"
+			return true;
+		//else 
+			//return false;
 	}
 	
 	
@@ -89,5 +98,7 @@ public class BowlingScore {
 
 //Resources used towards the development design and solution 
 
+	//https://www.youtube.com/watch?v=OPGTPQ4kURU
+	//
 
 
