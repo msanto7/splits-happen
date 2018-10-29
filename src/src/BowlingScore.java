@@ -1,3 +1,8 @@
+//Michael Santoro
+//10-29-18
+//Enlighten Design and Development Challenge - Bowling Score
+//IDE used Eclipse 
+
 package src;
 
 public class BowlingScore {
