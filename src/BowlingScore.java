@@ -78,12 +78,7 @@ public class BowlingScore {
 		
 	}
 	
-	
-	
-	
-	
-	
-	
+
 	
 	public boolean isSpare() {
 		//if first or second roll in frame is "/"
