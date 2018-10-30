@@ -11,6 +11,7 @@ public class BowlingScore {
 	//10 pins per frame
 	//2 rolls in every frame besides the final (if strike the 2, if spare then 3)
 	//21 max rolls
+	int score = 0; //global initialize 
 
 	public static void main(String[] args) {
 		
@@ -40,7 +41,7 @@ public class BowlingScore {
 		//calculate and return score 
 		
 		//initialize 
-		int score = 0;
+		//int score = 0;     brought up one level to give other methods access to variable
 		
 		//for (int i = 0; i < 21; i++) {
 			
@@ -60,7 +61,9 @@ public class BowlingScore {
 		 //     }      End for loop
 		
 			
-			return 0;
+			// return 0; used for original hardcoded solution
+		
+		return score;
 		
 		
 	} //End Method Score 
@@ -70,7 +73,8 @@ public class BowlingScore {
 	
 	public void throwBall(int numPins) {
 		
-		
+		score = score + numPins;   //simple case without any logic for spare or strike
+		//move score outside single method scope
 		
 	}
 	
