@@ -42,7 +42,7 @@ public class BowlingScore {
 		//initialize 
 		int score = 0;
 		
-		for (int i = 0; i < 21; i++) {
+		//for (int i = 0; i < 21; i++) {
 			
 			//if frame total < 10
 				//basic case (frame is neither spare nor strike 
@@ -51,13 +51,13 @@ public class BowlingScore {
 			//else if ('/' spare)
 				//score = 10 + (next roll)
 			
-			//else (strike)
+			//else ('X' strike)
 				// score = 10 + (next 2 rolls, total of pins down in the next frame)
 				
 			
 			
 			
-		} //End for loop
+		 //     }      End for loop
 		
 			
 			return 0;
@@ -65,6 +65,21 @@ public class BowlingScore {
 		
 	} //End Method Score 
 	//************************************
+	
+	//We will create a method to create a level of abstraction representing a single throw
+	
+	public void throwBall(int numPins) {
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	public boolean isSpare() {
 		//if first or second roll in frame is "/"
