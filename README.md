@@ -5,21 +5,13 @@ The most simple way to test this java application is to download and unzip the p
 <br />
 Alternatively you could clone the repository as well. Opening the project in an IDE will allow you to analyze the success of our JUnit tests. 
 
-## Solution -
-/ 
-<br /> 
-Environment  	//**************************
-<br />
+## Environment -
 My solution is written in Java. More specifically, the current Java Version 8 update 191. I used Eclipse to edit code, build and debug the solution, analyze JUnit tests, and manage my VCS (Git 2.19.1). I am most familiar with Git and Java so this is my main reason for choosing this language and set of tools.
 <br /> 
+## Solution Process - 
+I used the Test Driven Design method to help build a clean solution to this well known coding challenge. Starting by writing small unit tests for the most basic case of a bowling game. Leaving more complicated logic, such as handling a spare or strike, as a later step in the process. There are 2 main Java classes used. The BowlingScore.java is where our scoring logic and input processing takes place, as well as our main method to drive the program for user input. The TestScore.java is where we feed the program our given input and check to see if we are correctly calculating the expected score. I first handled the logic just given integer input, building an integer array so we could conceptualize a frame, and have storage to see 2 frames at a time. Then added the ability to use 'X', '/', '-' characters for strike spare and miss. The final step was implementing a build automation with Maven and creating a JAR file.   
 <br />
-Process 		//**************************  
-<br />
-I used the Test Driven Design method to help build a clean solution to this well known coding challenge. Starting by writing small unit tests for the most basic case of a bowling game. Leaving more complicated logic, such as handling a spare or strike, as a later step in the process. There are 2 main Java classes used. The BowlingScore.java is where our scoring logic and input processing takes place, as well as our main method to drive the program for user input. The TestScore.java is where we feed the program our given input and check to see if we are correctly calculating the expected score. I first handled the logic just given integer input, building an integer array so we could conceptualize a frame, and have storage to see 2 frames at a time. Then added the ability to use 'X', '/', '-' characters for strike spare and miss. The final step was implementing a build automation with Maven and creating a JAR file.  
-<br />  
-<br />
-Things to Add	//**************************
-<br />  
+## Things to Add	- 
 Ideally some type of GUI or web application could be used to allow the user to enter their input for example (http://www.bowlinggenius.com/). This solution also forces valid input, which in my current solution there is no input validation. 
 <br />
 
