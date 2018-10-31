@@ -3,6 +3,7 @@
 ## Build Instructions 
 The most simple way to test this java application is to download and unzip the project...change directory into the "splits-happen-dev" folder, and execute the score.jar file in the command prompt.
 <br />
+<br />
 Alternatively you could clone the repository as well. Opening the project in an IDE will allow you to analyze the success of our JUnit tests. 
 
 ## Environment -
