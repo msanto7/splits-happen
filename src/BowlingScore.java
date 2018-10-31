@@ -58,7 +58,7 @@ public class BowlingScore {
 		int frameCursor = 0;    //need to create an idea of a frame
 		
 		for (int cFrame = 0; cFrame < 10; cFrame++) {
-			if (rollsArray[frameCursor] == 10) {
+			if (isStrike(frameCursor)) {
 				//strike = true
 				score = score + 10 + rollsArray[frameCursor + 1] + rollsArray[frameCursor + 2];
 				frameCursor++;
@@ -97,18 +97,15 @@ public class BowlingScore {
 		return (
 				rollsArray[frameCursor] + rollsArray[frameCursor + 1] == 10
 				);
-		//if first or second roll in frame is "/"
-		//	return true;		
-		//else 
-			//return false;
 	}
 	//******************************************************
 	
-	public boolean isStrike() {
+	public boolean isStrike(int frameCursor) {
 		//if first roll in frame is "X"
-			return true;
+			//return true;
 		//else 
 			//return false;
+		return rollsArray[frameCursor] == 10;
 	}
 	
 	

@@ -79,6 +79,13 @@ public class TestScore extends TestCase{
 		
 	
 		//game of 300, perfect (all strikes)
+		
+		public void testPerfect() {
+			throwBallRepeat(12,10);
+			
+			assertEquals(300, game.score());
+		}		
+		//********************************************************
 	
 		//spare with next roll of zero
 	
