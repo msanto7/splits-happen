@@ -8,7 +8,6 @@ public class TestScore extends TestCase {
 	public void setUp() {
 		game = new BowlingScore();
 	}
-
 	//Tests
 	public void testZero() {
 		throwBallRepeat(20, 0);
