@@ -57,11 +57,11 @@ public class TestScore extends TestCase{
 		public void testSpareFollwedByZero() {
 			game.throwBall(5);
 			game.throwBall(5);      //this would be a spare
-			game.throwBall(0);      //so this would not affect previous frame score
+			game.throwBall(3);      //so this would not affect previous frame score
 			
 			throwBallRepeat(17, 0);
 			
-			assertEquals(10, game.score());
+			assertEquals(16, game.score());
 			
 		}
 		//**********************************************************

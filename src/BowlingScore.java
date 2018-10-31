@@ -42,32 +42,24 @@ public class BowlingScore {
 		//calculate and return score 
 		
 		//initialize 
-		//int score = 0;     brought up one level to give other methods access to variable
-		
-		//for (int i = 0; i < 21; i++) {
-			
+		//int score = 0;     brought up one level to give other methods access to variable		
+		//for (int i = 0; i < 21; i++) {			
 			//if frame total < 10
 				//basic case (frame is neither spare nor strike 
-				//score = (roll1 of frame) + (roll2 of frame)
-			
+				//score = (roll1 of frame) + (roll2 of frame)		
 			//else if ('/' spare)
-				//score = 10 + (next roll)
-			
+				//score = 10 + (next roll)			
 			//else ('X' strike)
-				// score = 10 + (next 2 rolls, total of pins down in the next frame)
-				
-			
-			
-			
-		 //     }      End for loop
-		
-			
+				// score = 10 + (next 2 rolls, total of pins down in the next frame)				
+		 //     }      End for loop		
 			// return 0; used for original hardcoded solution
 		
 		int score = 0;
+		int i = 0;    //need to create an idea of a frame
 		
-		for (int i = 0; i < rollsArray.length; i++) {
-			score = score + rollsArray[i];
+		for (int cFrame = 0; cFrame < 10; cFrame++) {
+			score = score + rollsArray[i] + rollsArray[i + 1]; //add the 2 in a frame
+			i = i + 2;   //meaning we need to jump 2 rolls into the next frame..we have fully processed the current one
 		}			
 			
 		return score;
