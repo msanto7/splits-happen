@@ -71,6 +71,22 @@ public class BowlingScore {
 		// ************************************
 
 	public void throwBall(int numPins) {
+		
+		
+		//XXXXXXXXXX There is where I may be able to account for the characters 
+		
+		//lets say we pass this method a char...
+		//and use each character to build an integer array
+		//so if we roll a ('X')...we populate the rollsArray with the integer 10
+		
+		//this way our logic is the same...and we process it before even entering the score 
+		
+		//XXXXXXXXXXX
+		
+		
+		
+		
+		
 
 		// score = score + numPins; //simple case without any logic for spare or strike
 		// move score outside single method scope
