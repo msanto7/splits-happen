@@ -81,6 +81,10 @@ public class BowlingScore {
 		
 		//this way our logic is the same...and we process it before even entering the score 
 		
+		//we could also maybe overload the throwBall method...so if it recieves a character 
+		//we use another throwBall method that takes care of that arguement and correctly
+		//updates the rollsArray
+		
 		//XXXXXXXXXXX
 		
 		

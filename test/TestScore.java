@@ -33,14 +33,6 @@ public class TestScore extends TestCase {
 	}
 
 	// ***********************************************************
-	// helper
-	private void throwBallRepeat(int numRolls, int numPins) {
-		for (int i = 0; i < numRolls; i++) {
-			game.throwBall(numPins);
-		} // ends for
-	}
-	// ***********************************************************
-
 	public void testSpareFollwedByAnyRoll() {
 		game.throwBall(5);
 		game.throwBall(5); // this would be a spare
@@ -72,6 +64,8 @@ public class TestScore extends TestCase {
 
 	// spare with next roll of zero
 	// spare with next roll of >= 1
+	
+	
 	
 	
 	//Tests for Given Program Input
@@ -131,6 +125,13 @@ public class TestScore extends TestCase {
 	}
 	
 	//**********************************************************
+	
+	// helper
+	private void throwBallRepeat(int numRolls, int numPins) {
+		for (int i = 0; i < numRolls; i++) {
+			game.throwBall(numPins);
+		} // ends for
+	}
 	
 	
 
