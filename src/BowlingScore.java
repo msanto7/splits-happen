@@ -55,12 +55,24 @@ public class BowlingScore {
 			// return 0; used for original hardcoded solution
 		
 		int score = 0;
-		int i = 0;    //need to create an idea of a frame
+		int frameCursor = 0;    //need to create an idea of a frame
 		
 		for (int cFrame = 0; cFrame < 10; cFrame++) {
-			score = score + rollsArray[i] + rollsArray[i + 1]; //add the 2 in a frame
-			i = i + 2;   //meaning we need to jump 2 rolls into the next frame..we have fully processed the current one
-		}			
+			if (rollsArray[frameCursor] == 10) {
+				//strike = true
+				score = score + 10 + rollsArray[frameCursor + 1] + rollsArray[frameCursor + 2];
+				frameCursor++;
+			}
+			else if (isSpare(frameCursor))  {
+				//spare = true
+				score = score + 10 + rollsArray[frameCursor+2];
+				frameCursor = frameCursor + 2;
+			}
+			else {
+				score = score + rollsArray[frameCursor] + rollsArray[frameCursor + 1]; //add the 2 in a frame
+				frameCursor = frameCursor + 2;   //meaning we need to jump 2 rolls into the next frame..we have fully processed the current one
+			}
+		} // ends for			
 			
 		return score;
 		
@@ -75,19 +87,22 @@ public class BowlingScore {
 		//score = score + numPins;   //simple case without any logic for spare or strike
 		//move score outside single method scope
 		
-		rollsArray[currentRoll++] = numPins;   //so this updates the the frame score including the next roll (for the case of a spare)
-		
+		rollsArray[currentRoll++] = numPins;   //so this updates the the frame score including the next roll (for the case of a spare)	
 	}
+	//*****************************************************
 	
 
 	
-	public boolean isSpare() {
+	public boolean isSpare(int frameCursor) {
+		return (
+				rollsArray[frameCursor] + rollsArray[frameCursor + 1] == 10
+				);
 		//if first or second roll in frame is "/"
-			return true;
-		
+		//	return true;		
 		//else 
 			//return false;
 	}
+	//******************************************************
 	
 	public boolean isStrike() {
 		//if first roll in frame is "X"

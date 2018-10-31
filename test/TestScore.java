@@ -54,7 +54,7 @@ public class TestScore extends TestCase{
 		}
 		//***********************************************************
 		
-		public void testSpareFollwedByZero() {
+		public void testSpareFollwedByAnyRoll() {
 			game.throwBall(5);
 			game.throwBall(5);      //this would be a spare
 			game.throwBall(3);      //so this would not affect previous frame score
@@ -62,6 +62,17 @@ public class TestScore extends TestCase{
 			throwBallRepeat(17, 0);
 			
 			assertEquals(16, game.score());
+			
+		}
+		//**********************************************************
+		
+		public void testStrikeFollwedByAnyRoll() {
+			game.throwBall(10);
+			game.throwBall(3);
+			game.throwBall(4);
+			throwBallRepeat(16, 0);
+			
+			assertEquals(24, game.score());
 			
 		}
 		//**********************************************************
