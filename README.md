@@ -1,5 +1,7 @@
 # Design and Development Challenge – Bowling Score
 
+## Build Instructions 
+
 ## Solution -
 //*********************** 
 <br /> 
@@ -11,7 +13,7 @@ My solution is written in Java. More specifically, the current Java Version 8 up
 <br />
 Process  
 <br />
-I used the Test Driven Design method to help build a clean solution to this well known coding challenge. Starting by writing small unit tests for the most basic case of a bowling game. Leaving more complicated logic, such as handling a spare or strike, as a later step in the process. There are 2 main Java classes used. The BowlingScore.java is where our scoring logic and input processing takes place. The TestScore.java is where we feed the program our given input and check to see if we are correctly calculating the expected score. 
+I used the Test Driven Design method to help build a clean solution to this well known coding challenge. Starting by writing small unit tests for the most basic case of a bowling game. Leaving more complicated logic, such as handling a spare or strike, as a later step in the process. There are 2 main Java classes used. The BowlingScore.java is where our scoring logic and input processing takes place. The TestScore.java is where we feed the program our given input and check to see if we are correctly calculating the expected score. I first handled the logic just given integer input, building an integer array so we could conceptualize a frame, and have storage to see 2 frames at a time. Then added the ability to use 'X', '/', '-' characters for strike spare and miss. The final step was implementing a build automation with Maven.  
 <br />
 //**************************  
 <br />

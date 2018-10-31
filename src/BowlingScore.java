@@ -33,6 +33,7 @@ public class BowlingScore {
 			}
 		} // ends for
 
+		System.out.println(score);
 		return score;
 
 	} // End Method Score
