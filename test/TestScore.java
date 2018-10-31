@@ -72,11 +72,14 @@ public class TestScore extends TestCase {
 	
 	public void testInput1() {
 		//same as perfect
-		throwBallRepeat(12, 10);
+		//throwBallRepeat(12, 10);
+		
+		game.throwBall("XXXXXXXXXXXX");
+		
 		assertEquals(300, game.score());
 	}
 	public void testInput2() {
-		game.throwBall(9);
+		/*game.throwBall(9);
 		game.throwBall(0);
 		game.throwBall(9);
 		game.throwBall(0);
@@ -95,7 +98,9 @@ public class TestScore extends TestCase {
 		game.throwBall(9);
 		game.throwBall(0);
 		game.throwBall(9);
-		game.throwBall(0);
+		game.throwBall(0);*/
+		
+		game.throwBall("9-9-9-9-9-9-9-9-9-9-");
 		assertEquals(90, game.score());
 		
 	}

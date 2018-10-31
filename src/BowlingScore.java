@@ -86,11 +86,7 @@ public class BowlingScore {
 		//updates the rollsArray
 		
 		//XXXXXXXXXXX
-		
-		
-		
-		
-		
+			
 
 		// score = score + numPins; //simple case without any logic for spare or strike
 		// move score outside single method scope
@@ -98,7 +94,58 @@ public class BowlingScore {
 		rollsArray[currentRoll++] = numPins; // so this updates the the frame score including the next roll (for the
 												// case of a spare)
 	}
-
+	//*****
+	public void throwBall(String gameInput) {
+		//String[] individualRolls = gameInput.split("[]+");
+		char[] individualRolls = gameInput.toCharArray();
+		
+		for (int i = 0; i < individualRolls.length; i++) {
+			System.out.println(individualRolls[i]);
+			
+			switch (individualRolls[i]) {
+			case 'X':
+				rollsArray[i] = 10;
+				break;
+			case '/':
+				// rollsArray[i] = 10 - the previous roll
+				break;
+			case '-':
+				rollsArray[i] = 0;
+				break;
+			case '1':
+				rollsArray[i] = 1;
+				break;
+			case '2':
+				rollsArray[i] = 2;
+				break;
+			case '3':
+				rollsArray[i] = 3;
+				break;
+			case '4':
+				rollsArray[i] = 4;
+				break;
+			case '5':
+				rollsArray[i] = 5;
+				break;
+			case '6':
+				rollsArray[i] = 6;
+				break;
+			case '7':
+				rollsArray[i] = 7;
+				break;
+			case '8':
+				rollsArray[i] = 8;
+				break;
+			case '9':
+				rollsArray[i] = 9;
+				break;
+				
+			default: System.out.println("Invalid character");
+					
+			} //end switch
+		} //end for
+		
+	}
 	// **********************************************************
 	public boolean isSpare(int frameCursor) {
 		return (rollsArray[frameCursor] + rollsArray[frameCursor + 1] == 10);
