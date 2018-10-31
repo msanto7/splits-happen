@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 //Michael Santoro
 //10-29-18
 //Enlighten Design and Development Challenge - Bowling Score
@@ -10,6 +12,20 @@ public class BowlingScore {
 	// 2 rolls in every frame besides the final
 	private int rollsArray[] = new int[21]; // 21 max rolls
 	private int currentRoll = 0; // this will help keep track of frames and rolls
+	private static Scanner input = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		
+		System.out.println("Enter bowling Score String");
+		String scoreString = input.nextLine();
+		System.out.println("Game : " + scoreString);
+		BowlingScore bowlingGame = new BowlingScore();
+		bowlingGame.throwBall(scoreString);
+		int result = bowlingGame.score();
+		System.out.println("Score = " + result);
+		
+		
+	} //Game Driver
 
 	// Scoring Logic
 	// ************************************************************************
@@ -33,7 +49,7 @@ public class BowlingScore {
 			}
 		} // ends for
 
-		System.out.println(score);
+		//System.out.println(score);
 		return score;
 
 	} // End Method Score
