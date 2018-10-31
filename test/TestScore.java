@@ -105,11 +105,12 @@ public class TestScore extends TestCase {
 		
 	}
 	public void testInput3() {
-		throwBallRepeat(21, 5);
+		//throwBallRepeat(21, 5);
+		game.throwBall("5/5/5/5/5/5/5/5/5/5/5");
 		assertEquals(150, game.score());		
 	}
 	public void testInput4() {
-		game.throwBall(10);
+		/*game.throwBall(10);
 		game.throwBall(7);
 		game.throwBall(3);
 		game.throwBall(9);
@@ -125,7 +126,9 @@ public class TestScore extends TestCase {
 		game.throwBall(10);
 		game.throwBall(10);
 		game.throwBall(8);
-		game.throwBall(1);
+		game.throwBall(1);*/
+		
+		game.throwBall("X7/9-X-88/-6XXX81");
 		assertEquals(167, game.score());
 	}
 	

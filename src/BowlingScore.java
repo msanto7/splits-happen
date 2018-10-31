@@ -107,7 +107,7 @@ public class BowlingScore {
 				rollsArray[i] = 10;
 				break;
 			case '/':
-				// rollsArray[i] = 10 - the previous roll
+				rollsArray[i] = 10 - rollsArray[i-1];
 				break;
 			case '-':
 				rollsArray[i] = 0;
