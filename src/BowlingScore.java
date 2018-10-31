@@ -10,8 +10,9 @@ public class BowlingScore {
 	//10 frames
 	//10 pins per frame
 	//2 rolls in every frame besides the final (if strike the 2, if spare then 3)
-	//21 max rolls
-	int score = 0; //global initialize 
+	private int rollsArray[] = new int[21];   //21 max rolls
+	private int currentRoll = 0;  //this will help keep track of frames and rolls
+	//int score = 0; //global initialize 
 
 	public static void main(String[] args) {
 		
@@ -63,6 +64,12 @@ public class BowlingScore {
 			
 			// return 0; used for original hardcoded solution
 		
+		int score = 0;
+		
+		for (int i = 0; i < rollsArray.length; i++) {
+			score = score + rollsArray[i];
+		}			
+			
 		return score;
 		
 		
@@ -73,8 +80,10 @@ public class BowlingScore {
 	
 	public void throwBall(int numPins) {
 		
-		score = score + numPins;   //simple case without any logic for spare or strike
+		//score = score + numPins;   //simple case without any logic for spare or strike
 		//move score outside single method scope
+		
+		rollsArray[currentRoll++] = numPins;   //so this updates the the frame score including the next roll (for the case of a spare)
 		
 	}
 	
